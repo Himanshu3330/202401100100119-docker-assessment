@@ -40,6 +40,12 @@ sha256:88162acba732bba1e9fcac615342b3daabc0508664791283c5913a1cc696d6b1
 
 `compose.yaml` runs `himanshu3330/fest-backend:1.0.0` from Docker Hub instead of building it locally.
 
+## Stage 5: cosign
+
+- `cosign.pub` is committed. `cosign.key` is password-protected and ignored by `*.key` in `.gitignore`.
+- `1.0.0` was signed by digest (`himanshu3330/fest-backend@sha256:88162acb…d6b1`). `cosign verify --key cosign.pub` passes.
+- `1.0.1` (digest `sha256:5a58db8fa4180229905d0d21d5b643ea819be9c1a3c32a49e102ad5107d8b4b9`) was pushed unsigned. `cosign verify` rejects it with `no signatures found`.
+
 ## Steps not completed
 
-_None yet._
+_None._
