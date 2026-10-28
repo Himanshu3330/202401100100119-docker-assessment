@@ -32,7 +32,13 @@ Full reports: [reports/trivy-before.txt](reports/trivy-before.txt) and [reports/
 
 ## Stage 4: published digest
 
-`himanshu3330/fest-backend:1.0.0` digest: _pending_
+`himanshu3330/fest-backend:1.0.0` (also tagged `1.0`) digest:
+
+```
+sha256:88162acba732bba1e9fcac615342b3daabc0508664791283c5913a1cc696d6b1
+```
+
+`compose.yaml` runs `himanshu3330/fest-backend:1.0.0` from Docker Hub instead of building it locally.
 
 ## Steps not completed
 
