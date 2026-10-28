@@ -44,7 +44,12 @@ sha256:88162acba732bba1e9fcac615342b3daabc0508664791283c5913a1cc696d6b1
 
 - `cosign.pub` is committed. `cosign.key` is password-protected and ignored by `*.key` in `.gitignore`.
 - `1.0.0` was signed by digest (`himanshu3330/fest-backend@sha256:88162acb…d6b1`). `cosign verify --key cosign.pub` passes.
-- `1.0.1` (digest `sha256:5a58db8fa4180229905d0d21d5b643ea819be9c1a3c32a49e102ad5107d8b4b9`) was pushed unsigned. `cosign verify` rejects it with `no signatures found`.
+- `1.0.1` (digest `sha256:61a741d724939ece5e5a2f66f1b696bcfe804feb9a888f487138cfc8d473c1dd`) was pushed unsigned. `cosign verify` rejects it with `no signatures found` (exit code 10).
+- The key pair was regenerated while recording `S5-1`. `1.0.0` was then signed again with the new key, so the committed `cosign.pub` verifies it.
+
+## Screenshots
+
+All evidence is in [`screenshots/`](screenshots): `S1-2`, `S1-3`, `S2-2`, `S2-3`, `S2-4`, `S3-1`, `S3-3`, `S4-1`, `S4-2`, `S4-3` (terminal) with `S4-3-browser` (page), `S5-1`, `S5-2`, `S5-3` and `S5-4`.
 
 ## Steps not completed
 
